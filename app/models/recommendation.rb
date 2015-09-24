@@ -1,7 +1,7 @@
 require 'httparty'
 require 'byebug'
 
-class Recommendation < ActiveRecord::Base
+class Recommendation 
 
   def initialize(content)
     @content = content
