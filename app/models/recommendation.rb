@@ -16,7 +16,6 @@ class Recommendation
 
   def get_recommendation
     @response["Similar"]["Results"][0]["Name"]
-    byebug
     @response["Similar"]["Results"][0]["Type"]
   end
 
