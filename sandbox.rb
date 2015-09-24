@@ -9,7 +9,7 @@ artist = gets.chomp
 api = Artist.new(artist)
 puts "The artist whose events you are seeking is #{api.artist_name}."
 puts ""
-puts "The venue for the next upcoming show is #{api.venue_name(0)}, located in #{api.venue_city(0)}, #{api.venue_region}."
+puts "The venue for the next upcoming show is #{api.venue_name(0)}, located in #{api.venue_city(0)}, #{api.venue_region(0)}."
 puts ""
 puts "The artist is performing at the following venues:"
 puts ""

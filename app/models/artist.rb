@@ -25,8 +25,8 @@ class Artist
     @response[item]["venue"]["city"]
   end
 
-  def venue_region
-    @response[0]["venue"]["region"]
+  def venue_region(item)
+    @response[item]["venue"]["region"]
   end
 
   def venues_all
