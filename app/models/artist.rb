@@ -3,6 +3,8 @@ require 'byebug'
 
 class Artist
 
+  attr_reader :artist
+
   def initialize(artist)
     @artist = artist
     @response = get_response
@@ -27,6 +29,10 @@ class Artist
 
   def venue_region(item)
     @response[item]["venue"]["region"]
+  end
+
+  def concert_date(item)
+    @response[item]["datetime"]
   end
 
   def venues_all

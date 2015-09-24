@@ -10,9 +10,6 @@ class Artist
 end
 
 class ArtistTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
-  end
 
   def test_artist_name
     assert_equal "Madonna", Artist.new("Madonna").artist_name
