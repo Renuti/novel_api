@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+#BELOW IS OUTLINE!!!!
+  # root 'unicorns#index'
+  #
+  # get 'unicorns' => 'unicorns#index'
+  # get 'api/v1/unicorns' => 'unicorns#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
