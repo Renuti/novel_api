@@ -10,13 +10,12 @@ class Recommendation
 
   private def get_response
     key = ENV['TASTEKID_KEY']
-    HTTParty.get("https://www.tastekid.com/api/#{key}/similar?q=#{@artist}&output=json")
+    HTTParty.get("https://www.tastekid.com/api/#{key}/similar?q=#{@artist}&verbose=1&output=json")
   end
 
   def get_recommendation
-    @response["Similar"]["Results"][0]["Name"]
-    byebug
-    @response["Similar"]["Results"][0]["Type"]
+    @response["Similar"]["Results"][1]["Name"]
+    @response["Similar"]["Results"][1]["Type"]
   end
 
 end
