@@ -17,16 +17,22 @@ class Artist
     @response[0]["artists"][0]["name"]
   end
 
-  def venue_name
-    @response[0]["venue"]["name"]
+  def venue_name(item)
+    @response[item]["venue"]["name"]
   end
 
-  def venue_city
-    @response[0]["venue"]["city"]
+  def venue_city(item)
+    @response[item]["venue"]["city"]
   end
 
-  def venue_region  
+  def venue_region
     @response[0]["venue"]["region"]
+  end
+
+  def venues_all
+    venues = {}
+    (1..10).each {|item| venues[venue_name(item)] = venue_city(item)}
+    venues
   end
 
 end
