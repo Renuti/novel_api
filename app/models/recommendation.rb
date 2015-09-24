@@ -1,7 +1,8 @@
 require 'httparty'
 require 'byebug'
+require './app/models/artist.rb'
 
-class Recommendation 
+class Recommendation
 
   def initialize(content)
     @content = content
@@ -10,12 +11,12 @@ class Recommendation
 
   private def get_response
     key = ENV['TASTEKID_KEY']
-    HTTParty.get("https://www.tastekid.com/api/#{key}/similar?q=#{content}&verbose=1")
+    HTTParty.get("https://www.tastekid.com/api/#{key}/similar?q=#{@content}&verbose=1")
   end
 
   def get_recommendation
-    @response["Similar"]["Info"]["name"]
-    @response["Similar"]["Info"]["type"]
+    byebug
+    @response["Similar"]["Results"][0]["Name"]
   end
 
 end
