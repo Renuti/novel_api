@@ -10,7 +10,7 @@ class Artist < ActiveRecord::Base
 
   private def get_response
     key = ENV['BANDSINTOWN_KEY']
-    HTTParty.get(    "http://api.bandsintown.com/artists/#{@artist}/events.json?api_version=2.0&app_id=#{key}")
+    HTTParty.get("http://api.bandsintown.com/artists/#{@artist}/events.json?api_version=2.0&app_id=#{key}")
   end
 
   def get_show_info
