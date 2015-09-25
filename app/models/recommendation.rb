@@ -14,11 +14,11 @@ class Recommendation
   end
 
   def rec_artist
-    artists = []
+    @similar_artist = []
     (1..3).each do |a|
       artists << @response["Similar"]["Results"][a]["Name"]
     end
-    artists
+    @similar_artist
   end
 
   # def recommend_type
