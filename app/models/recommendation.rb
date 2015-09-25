@@ -22,4 +22,8 @@ class Recommendation
     artists
   end
 
+  def top_recommendation
+    @response["Similar"]["Results"][1]["Name"]
+  end
+
 end
