@@ -4,7 +4,7 @@ require 'json'
 
 class Artist
   private def get_response
-    file = File.open('test/models/madonna.json') #File.read and below JSON.parse
+    file = File.open('test/models/madonna.json')
     JSON.load(file)
   end
 end

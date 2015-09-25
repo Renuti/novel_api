@@ -14,16 +14,12 @@ class Recommendation
     HTTParty.get("https://www.tastekid.com/api/#{key}/similar?q=#{@artist}&verbose=1&output=json")
   end
 
-  def top_three_recs
+  def top_three_recommendations
     artists = []
     (1..3).each do |item|
       artists << @response["Similar"]["Results"][item]["Name"]
     end
     artists
   end
-
-  # def recommend_type
-  #   @response["Similar"]["Results"][a]["Type"]
-  # end
 
 end
