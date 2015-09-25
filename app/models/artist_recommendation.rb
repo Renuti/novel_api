@@ -7,10 +7,6 @@ class ArtistRecommendation
     @recommendation = Recommendation.new(artist)
   end
 
-  #Note on below: we still have to deal with errors.
-  #1) Artist input by user does not exist in TasteKid
-  #2) Artist recommendations that come back from TasteKid do not exist in BandsInTown
-
   def return_recommendations
     recommendations = @recommendation.top_three_recommendations #recommendations is now an array with three artist recs
     recommendation_concerts = {} #empty hash
@@ -19,5 +15,14 @@ class ArtistRecommendation
     end
     recommendation_concerts # return the new hash!! YAY!!!!!!
   end
+
+  def return_one_recommendation
+    
+
+  end
+
+  #Note: we still have to deal with errors.
+  #1) Artist input by user does not exist in TasteKid
+  #2) Artist recommendations that come back from TasteKid do not exist in BandsInTown
 
 end
