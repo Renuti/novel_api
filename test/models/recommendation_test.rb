@@ -1,9 +1,10 @@
 require 'test_helper'
+require './app/models/recommendation.rb'
 require 'json'
 
 class Recommendation
   private def get_response
-    file = File.read("spicegirls.json")
+    file = File.read('test/models/spicegirls.json')
     JSON.parse(file)
   end
 end
