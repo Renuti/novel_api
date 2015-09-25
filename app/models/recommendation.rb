@@ -2,7 +2,6 @@ require 'httparty'
 require 'byebug'
 # require './app/models/artist.rb'
 
-
 class Recommendation
 
   def initialize(artist)
@@ -15,10 +14,10 @@ class Recommendation
     HTTParty.get("https://www.tastekid.com/api/#{key}/similar?q=#{@artist}&verbose=1&output=json")
   end
 
-  def rec_artist
+  def top_three_recs
     artists = []
-    (1..3).each do |a|
-      artists << @response["Similar"]["Results"][a]["Name"]
+    (1..3).each do |item|
+      artists << @response["Similar"]["Results"][item]["Name"]
     end
     artists
   end
