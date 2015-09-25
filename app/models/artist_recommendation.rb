@@ -23,8 +23,4 @@ class ArtistRecommendation
     recommendation_concerts # return the new hash, which only has one result!! YAY!!!!!!
   end
 
-  #Note: we still have to deal with errors.
-  #1) Artist input by user does not exist in TasteKid
-  #2) Artist recommendations that come back from TasteKid do not exist in BandsInTown
-
 end
