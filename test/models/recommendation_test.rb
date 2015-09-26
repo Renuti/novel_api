@@ -8,7 +8,9 @@ class Recommendation
 end
 
 class RecommendationTest < ActiveSupport::TestCase
-  def "test recs work"
-    assert RecommendationTest.new("Spice Girls")include?(name:"Atomic Kitten", type: "music")
+
+ test "test recs work" do
+    assert RecommendationTest.new("Spice Girls").recommend_artist.include?("Atomic Kitten")
   end
+
 end

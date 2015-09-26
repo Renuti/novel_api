@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'recommendations/index'
+
+  # get 'recommendations/show'
+
+
 #BELOW IS OUTLINE!!!!
   # root 'unicorns#index'
   #
