@@ -36,20 +36,28 @@ class Artist
   end
 
   def venues_all
-    venues = {}
-    @response.each_index {|item| venues[venue_name(item)] = venue_city(item)}
-    venues
+    if @response != []
+      venues = {}
+      @response.each_index {|item| venues[venue_name(item)] = venue_city(item)}
+      venues
+    else
+      venues = "There are no upcoming events for this artist."
+      venues
+    end
   end
+
+  #the above error should work if we stop getting this back from the URL issue:
+  #/Users/rutiwajnberg/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/rfc3986_parser.rb:66:in `split': bad URI(is not URI?): http://api.bandsintown.com/artists/Spice Girls/events.json?api_version=2.0&app_id=RENUTI (URI::InvalidURIError)
 
 #COMMENT OUT BELOW IF DOESN'T WORK
 
-  def concert_date
-    dates = []
-    (1..10).each do |item|
-      dates << @response[item]["datetime"]
-    end
-    dates
-  end
+  # def concert_date
+  #   dates = []
+  #   (1..10).each do |item|
+  #     dates << @response[item]["datetime"]
+  #   end
+  #   dates
+  # end
 
   # def venues_all
   #   venues = {}

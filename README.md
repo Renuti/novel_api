@@ -1,7 +1,7 @@
 # Concert Suggestion API
 
 ##Description
-This program is an API digestible by other programs. It pulls from two separate APIs: 1) TasteKid and 2) BandsinTown. The API allows a user to enter an artist, receive a list of either the top 3 or the top 1 similar artists based on the information entered, and returns those recommended artists along with the first 10 upcoming concerts they have worldwide.
+This program is an API digestible by other programs. It pulls from two separate APIs: 1) TasteKid and 2) BandsinTown. The API allows a user to enter an artist, receive a list of either the top 3 or the top 1 similar artists based on the information entered, and returns those recommended artists along with all of the upcoming concerts they have worldwide.
 
 ### How it's Done
 
