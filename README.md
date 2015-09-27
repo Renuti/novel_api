@@ -24,9 +24,9 @@ def top_three_recommendations
 Pulling artists and venue lists from BandsinTown:
 
 ```ruby
-  def venues_all
+def venues_all
     venues = {}
-    (@response["venue"]).each {|item| venues[venue_name(item)] = venue_city(item)}
+    @response.each_index {|item| venues[venue_name(item)] = venue_city(item)}
     venues
   end
 
