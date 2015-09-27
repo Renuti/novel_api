@@ -22,12 +22,10 @@ class Artist
   def venue_name(item)
     @response[item]["venue"]["name"]
   end
-byebug
 
   def venue_city(item)
     @response[item]["venue"]["city"]
   end
-byebug
 
   def venue_region(item)
     @response[item]["venue"]["region"]
@@ -39,7 +37,7 @@ byebug
 
   def venues_all
     venues = {}
-    (@response["venue"]).each {|item| venues[venue_name(item)] = venue_city(item)}
+    @response.each_index {|item| venues[venue_name(item)] = venue_city(item)}
     venues
   end
 
@@ -59,13 +57,13 @@ byebug
   #   venues
   # end
   #
-  def venues_dates_all
-    dates = @response.concert_date
-    dates_venues = {}
-    dates.each do |a|
-      dates_venues[a] = @response.venues_all
-    end
-    dates_venues
-  end
+  # def venues_dates_all
+  #   dates = @response.concert_date
+  #   dates_venues = {}
+  #   dates.each do |a|
+  #     dates_venues[a] = @response.venues_all
+  #   end
+  #   dates_venues
+  # end
 
 end
