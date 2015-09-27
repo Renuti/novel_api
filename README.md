@@ -1,13 +1,13 @@
 # Concert Suggestion API
 
 ##Description
-This program is an API digestible by other programs. It pulls from two separate APIs: 1) TasteKid and 2) BandsinTown. The API allows a user to enter an artist, receive a list of similar artists based on the information entered, and returns all recommended artists and any upcoming concerts they have worldwide.
+This program is an API digestible by other programs. It pulls from two separate APIs: 1) TasteKid and 2) BandsinTown. The API allows a user to enter an artist, receive a list of either the top 3 or the top 1 similar artists based on the information entered, and returns those recommended artists along with the first 10 upcoming concerts they have worldwide.
 
 ### How it's Done
 
 Pulling a list of suggested artists from TasteKid and limiting it to three artists:
 
-```ruby 
+```ruby
     def top_three_recommendations
        artists = []
        (1..3).each do |item|
@@ -15,7 +15,11 @@ Pulling a list of suggested artists from TasteKid and limiting it to three artis
        end
     artists
    end
+```   
 
+or one artist:   
+
+```ruby
    def top_recommendation
      @response["Similar"]["Results"][1]["Name"]
    end
@@ -38,4 +42,3 @@ Pulling artists and venue lists from BandsinTown:
     dates
   end
 ```
-
