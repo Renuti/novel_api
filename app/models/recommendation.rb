@@ -15,18 +15,25 @@ class Recommendation
   end
 
   def top_three_recommendations
-    artists = []
-    # RENEE - I think something like
-    # if @response["Similar"]["Results"][item]["Name"] != blank or whatever this is in the code
-    # else do the below
-    (1..3).each do |item|
-      artists << @response["Similar"]["Results"][item]["Name"]
+    if @response["Similar"]["Info"]["Type"] != "unknown"
+      artists = []
+      (1..3).each do |item|
+        artists << @response["Similar"]["Results"][item]["Name"]
+      end
+      artists
+    else
+      artists = "This artist is unknown."
+      artists
     end
-    artists
   end
 
   def top_recommendation
-    @response["Similar"]["Results"][1]["Name"]
+    if @response["Similar"]["Info"]["Type"] != "unknown"
+      @response["Similar"]["Results"][1]["Name"]
+    else
+      artists = "This artist is unknown."
+      artists
+    end
   end
 
 end
