@@ -8,7 +8,7 @@ artist = gets.chomp
 
 rec = Recommendation.new(artist)
 
-rec.top_three_recs.each do |a|
+rec.top_three_recommendations.each do |a|
   puts "#{a}"
 end
 

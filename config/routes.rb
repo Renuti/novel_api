@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  root 'artist_recommendations#index'
 
   get 'artist_recommendations/index'
   get 'artist_recommendations/show'
+
+  get 'api/v1/artist_recommendations' => 'artist_recommendations#index'
+  get 'api/v1/artist_recommendations/:show' => 'artist_recommendations#show'
 
 #BELOW IS OUTLINE!!!!
   # root 'unicorns#index'
