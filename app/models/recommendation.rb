@@ -30,3 +30,10 @@ class Recommendation
   end
 
 end
+# #test:
+# puts "Artist Name:"
+# artist = gets.chomp
+# rec = Recommendation.new(artist)
+# puts rec.top_three_recommendations
+
+#ALL WORKING CODE

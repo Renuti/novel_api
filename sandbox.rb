@@ -15,6 +15,7 @@ puts ""
 puts "The artist's next 10 shows are at the following venues:"
 puts ""
 api.venues_all.each do |k, v|
+  byebug
   puts "#{k} in #{v}"
 end
 
